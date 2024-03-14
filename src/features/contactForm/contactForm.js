@@ -125,6 +125,8 @@ const ContactForm = () => {
 
                     <Form encType="text/plain" id="messageForm" name="messageForm" autoComplete="on" noValidate data-netlify="true">
 
+                    <input type="hidden" name="messageForm" value="messageForm" />
+
                         <div className="form-floating mt-5 mb-4">
                             <MyTextInput className="form-control rounded-0 border-0 border-bottom"
                                 name="firstName"
