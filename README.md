@@ -26,6 +26,3 @@ Website for fictional skincare company. As of today the website simulates an e-c
 ## Tech Stack
 
 HTML, CSS, Bootstrap, ReactJS, Redux
-
-
-# skinNaturals
