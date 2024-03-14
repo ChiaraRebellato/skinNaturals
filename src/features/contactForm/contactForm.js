@@ -123,9 +123,9 @@ const ContactForm = () => {
                 <fieldset>
                     <legend className="fs-5 fw-bold text-center">Leave a message</legend>
 
-                    <Form action='/redirect' method='POST' encType="text/plain" id="messageForm" name="messageForm" autoComplete="on" noValidate data-netlify="true">
+                    <Form method='POST' encType="text/plain" id="messageForm" name="messageForm" autoComplete="on" noValidate data-netlify="true">
 
-                    <input type="hidden" name="messageForm" value="messageForm" />
+                    <input type="hidden" name="form-name" value="messageForm" />
 
                         <div className="form-floating mt-5 mb-4">
                             <MyTextInput className="form-control rounded-0 border-0 border-bottom"
