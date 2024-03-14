@@ -123,7 +123,7 @@ const ContactForm = () => {
                 <fieldset>
                     <legend className="fs-5 fw-bold text-center">Leave a message</legend>
 
-                    <Form encType="text/plain" id="messageForm" name="messageForm" autoComplete="on" noValidate data-netlify="true">
+                    <Form action='/redirect' method='POST' encType="text/plain" id="messageForm" name="messageForm" autoComplete="on" noValidate data-netlify="true">
 
                     <input type="hidden" name="messageForm" value="messageForm" />
 
