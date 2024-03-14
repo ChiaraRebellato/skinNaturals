@@ -84,7 +84,11 @@ const MyCheckbox = ({ children, ...props }) => {
 const ContactForm = () => {
 
     const navigate = useNavigate();
-
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
     return (
         <>
             <Formik
@@ -108,82 +112,90 @@ const ContactForm = () => {
                     msg: Yup.string()
                         .required('Required')
                 })}
-                onSubmit={() => {
-                    setTimeout(() => {
-                        navigate("/redirect", {
-                            state: {
-                                isSent: true
-                            }
-                        }
-                        );
-                    }, 400);
+                onSubmit={(values, { setSubmitting }) => {
+                    fetch("/", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: encode({ "form-name": "messageForm", ...values })
+                    })
+                        .then(() =>
+                            setTimeout(() => {
+                                setSubmitting(false);
+                                navigate("/redirect", {
+                                    state: {
+                                        isSent: true
+                                    }
+                                }
+                                );
+                            }, 400))
+                        .catch(error => alert(error));
 
                 }}
             >
-                <fieldset>
-                    <legend className="fs-5 fw-bold text-center">Leave a message</legend>
+            <fieldset>
+                <legend className="fs-5 fw-bold text-center">Leave a message</legend>
 
-                    <Form method='post' id="messageForm" name="messageForm" autoComplete="on" noValidate>
+                <Form method='post' id="messageForm" name="messageForm" autoComplete="on" noValidate>
 
                     <input type="hidden" name="form-name" value="messageForm" />
 
-                        <div className="form-floating mt-5 mb-4">
-                            <MyTextInput className="form-control rounded-0 border-0 border-bottom"
-                                name="firstName"
-                                type="text"
-                                pattern="^[a-zA-Z]+"
-                                required
-                                autoFocus
-                                autoComplete="given-name"
-                                aria-required="true"
-                                placeholder="Your Name"
-                            />
-                            <label htmlFor="name">Name<sup>*</sup></label>
-
-                        </div>
-
-                        <div className="form-floating mb-4">
-                            <MyTextInput className="form-control rounded-0 border-0 border-bottom"
-                                name="email"
-                                type="email"
-                                placeholder="name@example.com"
-                                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                                required
-                                autoComplete="email"
-                                aria-required="true"
-                            />
-                            <label htmlFor="email">Email address<sup>*</sup></label>
-
-                        </div>
-
-                        <div className="form-floating mb-4">
-                            <MyTextArea
-                                className="form-control rounded-0 h-100 border-0 border-bottom"
-                                name="msg"
-                                cols="5"
-                                rows="2"
-                                placeholder="Your Message"
-                                required
-                                aria-required="true"
-                            ></MyTextArea>
-                            <label htmlFor="msg">Message<sup>*</sup></label>
-
-                        </div>
-
-                        <MyCheckbox name="acceptedTerms" className='m-1'>
-                            I accept the terms and conditions
-                        </MyCheckbox>
-
-                        <input
-                            type="submit"
-                            className="btn border rounded-0 w-100 mt-3 mb-3"
-                            value="SEND"
-                            tabIndex={0}
+                    <div className="form-floating mt-5 mb-4">
+                        <MyTextInput className="form-control rounded-0 border-0 border-bottom"
+                            name="firstName"
+                            type="text"
+                            pattern="^[a-zA-Z]+"
+                            required
+                            autoFocus
+                            autoComplete="given-name"
+                            aria-required="true"
+                            placeholder="Your Name"
                         />
+                        <label htmlFor="name">Name<sup>*</sup></label>
 
-                    </Form>
-                </fieldset>
-            </Formik>
+                    </div>
+
+                    <div className="form-floating mb-4">
+                        <MyTextInput className="form-control rounded-0 border-0 border-bottom"
+                            name="email"
+                            type="email"
+                            placeholder="name@example.com"
+                            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                            required
+                            autoComplete="email"
+                            aria-required="true"
+                        />
+                        <label htmlFor="email">Email address<sup>*</sup></label>
+
+                    </div>
+
+                    <div className="form-floating mb-4">
+                        <MyTextArea
+                            className="form-control rounded-0 h-100 border-0 border-bottom"
+                            name="msg"
+                            cols="5"
+                            rows="2"
+                            placeholder="Your Message"
+                            required
+                            aria-required="true"
+                        ></MyTextArea>
+                        <label htmlFor="msg">Message<sup>*</sup></label>
+
+                    </div>
+
+                    <MyCheckbox name="acceptedTerms" className='m-1'>
+                        I accept the terms and conditions
+                    </MyCheckbox>
+
+                    <input
+                        type="submit"
+                        className="btn border rounded-0 w-100 mt-3 mb-3"
+                        value="SEND"
+                        tabIndex={0}
+                    />
+
+                </Form>
+            </fieldset>
+        </Formik >
         </>
     );
 };
