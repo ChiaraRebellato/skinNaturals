@@ -12,6 +12,9 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+p{
+  margin: 0;
+}
 
 .skip {
   position: absolute;
