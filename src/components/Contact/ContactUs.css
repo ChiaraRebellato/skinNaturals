@@ -1,0 +1,39 @@
+#contactBanner {
+    background-image: url(../../../public/img/companyOverlay.webp);
+    object-fit: cover;
+    background-position: bottom;
+    background-size: cover;
+    height: 170px;
+}
+
+#messageForm label {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.text-danger{
+    font-size: 0.9rem !important;
+}
+
+#submitButton:disabled img{
+    color: lightgray !important;
+}
+
+#contactForm span{
+    font-size: 0.8rem;
+}
+
+@media only screen and (min-width:768px) {
+
+    .contactInfo{
+        width: 52%;
+    }
+
+    #contactBanner {
+        height: 240px;
+    }
+
+    #contactForm{
+        width: 25rem;
+    }
+}

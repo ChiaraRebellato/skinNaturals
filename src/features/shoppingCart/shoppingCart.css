@@ -1,0 +1,9 @@
+
+#productsInCart img{
+    width: 3rem;
+}
+
+#productsInCart{
+    overflow-y: scroll;
+    height: 65%;
+}

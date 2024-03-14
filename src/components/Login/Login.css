@@ -1,0 +1,23 @@
+#loginBanner {
+    background-image: url(../../../public/img/organic.webp);
+    background-position: center;
+    background-size: cover;
+    height: 150px;
+}
+
+#login fieldset legend {
+    font-size: 1rem;
+}
+
+@media only screen and (min-width:768px) {
+
+    #loginBanner {
+        height: 500px;
+        width: 50%;
+    }
+
+    .loginForm {
+        width: 50%;
+    }
+
+}  

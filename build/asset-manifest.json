@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9a586732.css",
+    "main.js": "/static/js/main.88f74453.js",
+    "static/js/453.e62c8015.chunk.js": "/static/js/453.e62c8015.chunk.js",
+    "static/media/headerBannerMobile.webp": "/static/media/headerBannerMobile.017c89294e0440952166.webp",
+    "static/media/companyOverlay.webp": "/static/media/companyOverlay.d3cafd04a1f82672b6b8.webp",
+    "static/media/productsListMobile.webp": "/static/media/productsListMobile.70e8187a403f73ea4fd3.webp",
+    "static/media/organic.webp": "/static/media/organic.330ec1af1f0291fbd1d0.webp",
+    "static/media/aboutMobile.webp": "/static/media/aboutMobile.309c7679b13679c707a8.webp",
+    "static/media/header5.webp": "/static/media/header5.326838036ec6324d37e5.webp",
+    "static/media/aboutBanner.webp": "/static/media/aboutBanner.0ab4939e32f43d5c239c.webp",
+    "static/media/TAN-PEARL.otf": "/static/media/TAN-PEARL.657acf1fede9b308aafa.otf",
+    "index.html": "/index.html",
+    "main.9a586732.css.map": "/static/css/main.9a586732.css.map",
+    "main.88f74453.js.map": "/static/js/main.88f74453.js.map",
+    "453.e62c8015.chunk.js.map": "/static/js/453.e62c8015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a586732.css",
+    "static/js/main.88f74453.js"
+  ]
+}

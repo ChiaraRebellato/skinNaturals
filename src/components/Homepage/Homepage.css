@@ -1,0 +1,145 @@
+.headerBanner {
+    background-image: url(../../../public/img/headerBannerMobile.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+}
+
+.headerBanner h3 span {
+    font-family: Pearl;
+}
+
+#companyInfo {
+    background-image: url(../../../public/img/productsListMobile.webp);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+#featuredProducts {
+    display: grid;
+    gap: 3rem;
+}
+
+#featuredProducts img {
+    width: 100%;
+}
+
+a{
+    color: black;
+}
+
+@media only screen and (min-width:500px) {
+
+    .headerBanner {
+        height: 800px;
+    }
+
+    #offcanvasNavbarLabel {
+        display: none;
+    }
+
+    .offcanvas-header {
+        position: relative;
+        top: 1rem;
+    }
+
+    .offcanvasNavbarBtn {
+        position: relative;
+        left: 92%;
+        top: 1rem;
+    }
+
+    #featuredProducts img {
+        width: 60%;
+    }
+
+}
+
+
+@media only screen and (min-width:574px) {
+
+    #featuredProducts img {
+        width: 40%;
+    }
+
+}
+
+
+@media only screen and (min-width: 675px) {
+    .headerBanner {
+        background-image: url(../../../public/img/header5.webp);
+        background-position: right;
+        height: 600px;
+        text-align: start !important;
+        padding: 10% !important;
+    }
+}
+
+@media only screen and (min-width:768px) {
+
+    .navbar-brand {
+        font-size: 1.6rem !important;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .cart svg,
+    .loginIcon svg {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .headerBanner h2 {
+        margin-bottom: 1rem !important;
+
+    }
+
+    #companyInfo {
+        background-image: none;
+        background-color: #dee3ee99;
+        height: 600px;
+    }
+
+    .companyInfoDesc p {
+        text-align: justify;
+    }
+
+    #featuredProducts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    #featuredProducts img {
+        width: 70%;
+    }
+
+}
+
+@media only screen and (min-width:900px) {
+
+    #companyInfo {
+        height: auto;
+    }
+
+    #featuredProducts {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3rem;
+    }
+
+    #featuredProducts img {
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .companyInfoDesc .row{
+        margin-bottom: 12vh;
+    }
+}

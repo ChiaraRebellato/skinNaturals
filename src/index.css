@@ -1,0 +1,61 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+p{
+  margin: 0;
+}
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.btn {
+    background-color: #dbeae2 !important;
+    border-radius: 0 !important;
+}
+
+.hoverEffect:hover
+{
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.337);
+  transition-duration: 0.4s ;
+}
+
+.featured:hover,
+.shopProducts>div:hover, #shopForm input[type="submit"]:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: 0.5s ease-out 0s;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: var(--bs-breadcrumb-divider, ">") !important;
+}
+
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+  border-color: transparent !important;
+}
+
+.container-fluid {
+  --bs-gutter-x: 0 !important;
+}
+

@@ -1,0 +1,66 @@
+@font-face {
+    font-family: Pearl;
+    src: url('../../../public/fonts/TAN-PEARL.otf');
+}
+
+#promo {
+    background-color: #dbeae2;
+}
+
+.navbar-brand {
+    font-family: Pearl;
+    margin-right: 0 !important;
+}
+
+.navbar-toggler {
+    padding-right: 0 !important;
+    margin-right: 0.4rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.offcanvasNavbarBtn, .offcanvas-title{
+    left: 0 !important;
+    top: 0 !important;
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-thickness: 0.05rem;
+    text-underline-offset: 0.3rem;
+}
+
+#cart {
+    position: relative;
+    top: -0.08rem;
+    margin-right: 0 !important;
+}
+
+.loginIcon {
+    cursor: pointer;
+}
+
+.offcanvas-title>span{
+    position: relative;
+    background-color: #dbeae2;
+    min-width: 2rem;
+    height: 2rem;
+    top: 0.2rem;
+}
+
+#cartLength{
+    position: absolute;
+    background-color: #dbeae2;
+    min-width: 1.1rem;
+    height: 1.1rem;
+    top: -0.2rem;
+    right: -0.3rem;
+}
+
+#cartLength>span{
+    position: relative;
+    font-size: .8rem;
+    top: -0.3rem;
+}

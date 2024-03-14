@@ -1,0 +1,49 @@
+
+.shopFilter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.shopProducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+    column-gap: 1rem;
+}
+
+.shopProducts img {
+    width: 100%;
+}
+
+@media only screen and (min-width:574px) {
+
+    .shopProducts img {
+        width: 70%;
+    }
+
+}
+
+
+@media only screen and (min-width:768px) {
+
+    .shopProducts img {
+        width: 60%;
+    }
+
+    .shopProducts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media only screen and (min-width:1000px) {
+
+    .shopProducts img {
+        width: 70%;
+    }
+
+    .shopProducts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

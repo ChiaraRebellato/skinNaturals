@@ -1,0 +1,40 @@
+.aboutUsBanner {
+    background-image: url(../../../public/img/aboutMobile.webp);
+    background-position: center;
+    background-size: 100%;
+    height: 500px;
+}
+
+.aboutUsBanner h2 {
+    padding-top: 4rem;
+    font-size: 1.3rem;
+}
+
+.certified {
+    width: 5rem;
+    height: 5rem;
+}
+
+.companyInfoDesc, .aboutUsDescr, .mission, .vision{
+    line-height: 2rem;
+}
+
+@media only screen and (min-width:574px) {
+
+    .aboutUsBanner {
+        background-image: url(../../../public/img/aboutBanner.webp);
+        background-position: left;
+        background-size: cover;
+    }
+
+    .aboutUsBanner h2 {
+        text-align: end !important;
+        padding: 10%;
+    }
+
+    .mission img,
+    .vision img {
+        width: 60% !important;
+    }
+
+}

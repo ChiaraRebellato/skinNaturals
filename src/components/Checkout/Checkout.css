@@ -1,0 +1,53 @@
+.productsInCart>img{
+    height: 6.5rem;
+}
+
+#qty{
+    font-size: 0.8rem;
+}
+
+#cashier{
+    background-color: #dbeae2;
+    height: 10rem;
+}
+
+#cashier > span{
+    font-size: 0.9rem;
+}
+
+@media only screen and (min-width:768px) {
+    .product{
+        margin: 2rem 3rem !important;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #checkout{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    #checkout :nth-child(2){
+        margin-top: 0 !important;
+    }
+
+    .productsInCart{
+        font-size: 1.2rem;
+    }
+
+    .productsInCart>img{
+        height: 8rem;
+        margin-right: 1rem;
+    }
+
+    #remove{
+        display: none;
+    }
+
+    #removeDesktop{
+        display: inline !important;
+        font-size: 1rem;
+    }
+
+}
+
