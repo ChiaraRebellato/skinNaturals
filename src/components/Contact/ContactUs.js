@@ -21,9 +21,9 @@ function ContactUs() {
 
                 <div className='d-md-flex'>
 
-                    <div className='contactInfo d-md-flex align-items-center ms-md-5'>
+                    <div className='contactInfo d-md-flex align-items-center justify-content-center'>
                         
-                        <div className="p-4  ms-md-4">
+                        <div className="p-4">
                             <div className="mb-3">
                                 <p className="fw-bold fs-6">Address</p>
                                 <p>15 Grand Avenue, Seattle, Washington State</p>

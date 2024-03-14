@@ -54,14 +54,14 @@ function Checkout() {
                                 <div key={index} className="productsInCart d-flex mb-4">
                                     <img src={`/${elem.img}`} alt={`SkinNaturals ${elem.img}`} />
                                     <div className="w-100 ms-2">
-                                        <div className='d-flex align-items-center'>
-                                            <div>
-                                                <Link to={`/details/${elem.id}`} className="text-decoration-none fw-bold me-2 mb-2 flex-grow-1">{elem.article}</Link>
+                                        <div className='d-flex'>
+                                            <div className='flex-grow-1'>
+                                                <Link to={`/details/${elem.id}`} className="text-decoration-none fw-bold me-2 mb-2">{elem.article}</Link>
                                                 <p id='qty' className="text-muted">{product[0].size}</p>
                                                 <p>€ {product[0].price}</p>
                                             </div>
 
-                                            <button id='remove' className='bg-transparent border-0 p-1 flex-grow-1' onClick={() => { handleRemoval(elem.id, elem.price, elem.qty) }}>
+                                            <button id='remove' className='bg-transparent border-0' onClick={() => { handleRemoval(elem.id, elem.price, elem.qty) }}>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x-lg" viewBox="0 0 16 16">
                                                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                                                 </svg>

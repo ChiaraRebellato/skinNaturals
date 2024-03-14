@@ -63,7 +63,7 @@ function Homepage() {
                             <div
                                 className="row imgs d-none d-md-flex justify-content-center justify-content-lg-around">
 
-                                <img className="d-none d-md-inline d-lg-none" src="img/faceMobile.webp" alt="Women" />
+                                <img className="d-none d-md-inline d-lg-none mt-4" src="img/faceMobile.webp" alt="Women" />
                                 <img className="d-none d-lg-inline img-fluid" src="img/face.webp" alt="Women" />
                             </div>
 
